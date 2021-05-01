@@ -46,7 +46,29 @@ let take the example above where in out state we have count which is equal to<br
   this.setState({count: this.state.connt = 9})
   ```
 2. Updates May Be Asynchronous.<br>
-...coming soon.
+So what does that mean? 
+Typically what React would do is batch multiple <br> **setState()** calls into a single update for performance reasons. One note to take is<br>that `this.props` and `this.state` may be updated asynchronously, that why you<br> shouldn't rely on their values for or in order calculate the next state.
+<br><br>
+Example
+<br><br>
+ let's say you want to update your count state by 2, 
+ so setting the state twice would not work, because 
+ the React batch setState calls into a single update,
+ now the actually result from the below code is just 1.
+
+```js
+
+//the wrong way.
+this.setState({ count: this.state.count + 1 });
+this.setState({ count: this.state.count + 1 });
+
+OR
+
+this.setState({
+  count: this.state.count + this.props.increment
+})
+```
+so what's the right way of doing something
   
 
 
