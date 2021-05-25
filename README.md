@@ -42,4 +42,7 @@ React as the docs says is a JavaScript library for building user interfaces.
 1. [lifeCycle Methods]()
    1. [componentDidMount]()
    1. [componentWillUnmount]()
+1. [Hooks]()
+2. [Routing]()
+3. [Fetch]()
 
